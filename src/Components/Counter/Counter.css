@@ -3,5 +3,5 @@
 }
 .border-style {
   border: 1px dashed #fff;
-  margin: 20px;
+  border-radius: 100%;
 }
