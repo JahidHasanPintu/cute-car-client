@@ -15,9 +15,10 @@ const Header = () => {
                     </Nav>
                     <Nav>
                     <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
-                    <Nav.Link as={Link} to={"/home"}>Pricing</Nav.Link>
+                    <Nav.Link as={Link} to={"/manage-inventory"}>Manage Item</Nav.Link>
+                    <Nav.Link as={Link} to={"/my-item"}>My Item</Nav.Link>
+                    <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
                     
-                    <Nav.Link as={Link} to={"/home"}>About</Nav.Link>
                     
                     <Nav.Link as={Link} to={"/login"}>Login</Nav.Link>
                     <Nav.Link as={Link} to={"/signup"}>Register</Nav.Link>
