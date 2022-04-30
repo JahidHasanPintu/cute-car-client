@@ -78,6 +78,14 @@ ul {
   color: #24262b;
   background-color: #ffffff;
 }
+.copy-right {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.foot-text {
+  color: #ffffff;
+}
 
 /*responsive*/
 @media (max-width: 767px) {
