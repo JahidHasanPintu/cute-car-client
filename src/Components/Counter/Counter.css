@@ -1,3 +1,7 @@
 .bg-img {
   background-color: gray;
 }
+.border-style {
+  border: 1px dashed #fff;
+  margin: 20px;
+}
