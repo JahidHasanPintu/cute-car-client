@@ -1,13 +1,16 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Service from '../../Service/Service';
+import Banner from '../Banner/Banner';
+
 
 
 
 const Home = () => {
     return (
         <div>
-
-            <Header></Header>
+            <Banner></Banner>
+            <Service></Service>
+            
 
             <h2>This is home</h2>
         </div>
