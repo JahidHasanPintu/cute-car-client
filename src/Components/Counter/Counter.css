@@ -1,7 +1,27 @@
 .bg-img {
-  background-color: gray;
+  margin-top: 50px;
+  background-image: url(../../images/car-bg.jpg);
+  background-size: cover;
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../../images/car-bg.jpg);
 }
 .border-style {
   border: 1px dashed #fff;
-  border-radius: 100%;
+  /* border-radius: 50%; */
+  padding: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .border-style {
+    border: none;
+    /* border-radius: 50%; */
+    /* padding: 20px; */
+  }
+  .counter-colection {
+    display: none;
+  }
+  .bg-img {
+    height: 100%;
+  }
 }
