@@ -1,0 +1,33 @@
+.all-makes-3 {
+}
+
+.image-bar {
+  width: 100%;
+  height: 140px;
+  border-left: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+}
+.mks-3 {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mks-3 img {
+  height: auto;
+  display: block;
+  max-height: 100px;
+  margin: 0 auto;
+}
