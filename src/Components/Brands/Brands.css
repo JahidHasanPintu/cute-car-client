@@ -7,7 +7,30 @@
   border-left: 1px solid #e9e9e9;
   border-right: 1px solid #e9e9e9;
   border-top: 1px solid #e9e9e9;
+  /* border: 1px solid #e9e9e9; */
 }
+
+.mks-3-name {
+  display: block;
+  padding: 14px 0;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 0px;
+  background-color: #fbfdff;
+  border: 1px solid #e9e9e9;
+  font-size: 16px;
+  color: #0f0d1d;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+
 .mks-3 {
   position: relative;
   display: inline-block;
@@ -29,5 +52,10 @@ a {
   height: auto;
   display: block;
   max-height: 100px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.brand-colum {
+  margin-bottom: 30px;
 }
