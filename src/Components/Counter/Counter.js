@@ -1,11 +1,18 @@
 import React from 'react';
 import './Counter.css';
 import CountUp from 'react-countup';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
+import ParallaxImg from './ParallaxImg/ParallaxImg';
+import img1 from '../../images/car-bg.jpg';
 const Counter = () => {
     return (
         <div>
-            <section className="py-50 bg-img countnm-bx">
+			<ParallaxProvider>
+				<ParallaxImg imgsrc={img1} height="500px" opacity=".5">
+
+				</ParallaxImg>
+			</ParallaxProvider>
+        <section className="py-50 bg-img countnm-bx">
 
 			
 		<div className="container">
