@@ -1,4 +1,28 @@
-.all-makes-3 {
+.brand {
+  margin-bottom: 60px;
+}
+.brand {
+  position: relative;
+  padding: 0;
+  color: #2f2f2f;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 30px;
+}
+.brand:before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #f91942;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  right: 0;
+  margin: 0 auto;
 }
 
 .image-bar {

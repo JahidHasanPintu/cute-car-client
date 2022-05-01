@@ -4,6 +4,10 @@ const Brands = () => {
     return (
         <div>
             <section className="all-makes-3 container">
+				 <div className="section-headd">
+				 <h4 className='text-center brand'>Brands</h4>
+				 </div>
+					
 					<div className="row justify-content-center align-items-center text-center">
 						<div className="col-xl-2 col-xxl-2 col-lg-3 col-md-4 col-sm-6 col-12 brand-colum">
 						<a href="https://listing.maxwheelswp.com/inventory/?category=bmw">

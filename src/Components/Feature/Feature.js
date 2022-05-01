@@ -38,7 +38,7 @@ const Feature = () => {
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_five"><i className="fa fa-upload"></i></span>
             <h6>Market Strategy</h6>
-            <p>Holding back technology to preserve broken business models is like allowing blacksmiths to veto the internal combustion engine in order to protect their horseshoes.</p>
+            <p>Holding back technology to preserve broken business models is like allowing blacksmiths to veto </p>
           </div>
         </div>
         <div className="col-lg-4 col-sm-6">

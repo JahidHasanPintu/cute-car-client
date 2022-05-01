@@ -52,7 +52,7 @@ a:hover {
 .section-head h4 {
   position: relative;
   padding: 0;
-  color: #f91942;
+  color: #2f2f2f;
   line-height: 1;
   letter-spacing: 0.3px;
   font-size: 34px;
@@ -72,11 +72,7 @@ a:hover {
   right: 0;
   margin: 0 auto;
 }
-.section-head h4 span {
-  font-weight: 700;
-  padding-bottom: 5px;
-  color: #2f2f2f;
-}
+
 p.service_text {
   color: #cccccc !important;
   font-size: 16px;
@@ -128,7 +124,7 @@ p.awesome_line {
   transition: all 0.5s ease 0s;
 }
 .item:hover {
-  background: #f91942;
+  background: #24262b;
   box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.5s ease 0;
   transition: all 0.5s ease 0;
