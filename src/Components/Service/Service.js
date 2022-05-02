@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
-    const {name,img,description,price}=props.service;
+    const {id,name,img,description,price}=props.service;
     const navigate = useNavigate();
-    
+    const navigateToUpdate = id =>{
+        navigate(`/inventory/${id}`);
+    }
     
     return (
 
@@ -16,8 +18,8 @@ const Service = (props) => {
             <h3>{name}</h3>
             <h6>price: ${price} /month</h6>
             <p>{description}</p>
-            <div className="bg-buy-plan">
-                <span  className="title4">Buy Plan</span>
+            <div onClick={()=> navigateToUpdate(id)} className="bg-buy-plan">
+                <span  className="title4">Update</span>
             </div>
         </div>
     );
