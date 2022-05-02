@@ -5,13 +5,13 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Login from './Components/Login/Login';
-import Signup from './Components/Signup/Signup';
 import Inventory from './Components/Inventory/Inventory';
 import ManageInventory from './Components/ManageInventory/ManageInventory';
 import NotFound from './Components/NotFound/NotFound';
 import AddNewItem from './Components/AddNewItem/AddNewItem';
 import MyItem from './Components/MyItem/MyItem';
 import Blog from './Components/Blog/Blog';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <RequireAuth> <Checkout></Checkout> </RequireAuth>
         }></Route> */}
         <Route path="/login" element={<Login></Login> }></Route>
-        <Route path="/signup" element={<Signup></Signup> }></Route>
+        <Route path="/register" element={<Register></Register> }></Route>
         <Route path="/add-new" element={<AddNewItem></AddNewItem> }></Route>
         <Route path="/my-item" element={<MyItem></MyItem>}></Route>
         <Route path="*" element={ <NotFound></NotFound>}></Route>
