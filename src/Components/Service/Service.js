@@ -22,6 +22,8 @@ const Service = (props) => {
                 <span  className="title4">Update</span>
             </div>
         </div>
+       
+
     );
 };
 
