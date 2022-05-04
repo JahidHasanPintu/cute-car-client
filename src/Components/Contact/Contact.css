@@ -45,13 +45,13 @@
   padding: 25px 40px;
 }
 
-h2 {
+.contact-title {
   position: relative;
   padding: 0 0 10px;
   margin-bottom: 10px;
 }
 
-h2:after {
+.contact-title:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -82,7 +82,7 @@ textarea {
   min-height: 150px;
 }
 
-.btn {
+.contact-button {
   width: 100%;
   padding: 0.5rem 1rem;
   background-color: #24262b;
@@ -94,7 +94,7 @@ textarea {
   transition: 0.3s;
 }
 
-.btn:hover {
+.contact-button:hover {
   background-color: #24262b;
 }
 
