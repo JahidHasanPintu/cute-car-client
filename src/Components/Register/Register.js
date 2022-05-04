@@ -5,6 +5,7 @@ import './Register.css';
 // import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Register = () => {
 
@@ -21,7 +22,12 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         error,
+        loading,
+        sending,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    if (loading || sending){
+        return <Loading></Loading>
+    }
     if (user) {
         navigate(from, { replace: true });
     }
