@@ -1,40 +1,40 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import useCars from '../../hooks/useCars';
+import SingleItems from './SingleItems/SingleItems';
 
 
 
 
 const ManageInventory = () => {
+    const [cars] =useCars();
     return (
         <div>
              <Table responsive>
                 <thead>
                     <tr>
-                    <th>#</th>
-                    {Array.from({ length: 6 }).map((_, index) => (
-                        <th key={index}>Table heading</th>
-                    ))}
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>price</th>
+                    <th>Quantity</th>
+                    <th>Sold</th>
+                    <th>Edit/Delete </th>
+                    
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td>1</td>
-                    {Array.from({ length: 6 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    {Array.from({ length: 6 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
-                    </tr>
-                    <tr>
-                    <td>3</td>
-                    {Array.from({ length: 6 }).map((_, index) => (
-                        <td key={index}>Table cell {index}</td>
-                    ))}
-                    </tr>
+                    
+                    {
+                        cars?.map(car => <SingleItems
+                            key= {car._id}
+                            car={car}
+                        >
+                        
+
+                        </SingleItems>                        
+                        )
+                    }
                 </tbody>
                 </Table>
         </div>
