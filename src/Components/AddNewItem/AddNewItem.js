@@ -1,10 +1,58 @@
-import React from 'react';
+
+import React, { useRef, useState } from 'react';
 import './AddNewItem.css'
 
 const AddNewItem = () => {
+
+    // using use ref hook to take input data
+    const nameRef = useRef('');
+        const emailRef = useRef('');
+        const soldRef = useRef('');
+        const brandRef = useRef('');
+        const priceRef = useRef('');
+        const ratingsRef = useRef('');
+        const quantityRef = useRef('');
+        const urlRef = useRef('');
+        const descriptionRef = useRef('');
+        
+
+            // taking user input function 
+    const handleAddProduct = event => {
+
+        event.preventDefault();
+        const carData = {
+        name : nameRef.current.value,
+        email : emailRef.current.value,
+        supplier : brandRef.current.value,
+        price : priceRef.current.value,
+        ratings : ratingsRef.current.value,
+        quantity : quantityRef.current.value,
+        sold : soldRef.current.value,
+        img : urlRef.current.value,
+        description : descriptionRef.current.value
+        }
+        
+        const url= `http://localhost:5000/cars`;
+        fetch(url,{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(carData)
+        })
+        .then(res=>res.json())
+        .then(result =>{
+            console.log(result);
+        })
+        
+        
+        console.log(JSON.stringify(carData));
+    };
+
     return (
         <div>
               <section className='add-items-form'>
+                <form onSubmit={handleAddProduct}>
                 <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-8 col-lg-8 col-xl-6">
@@ -15,45 +63,45 @@ const AddNewItem = () => {
                     </div>
                     <div className="row align-items-center">
                         <div className="col mt-4">
-                        <input type="text" className="form-control" placeholder="Full Name"/>
+                        <input  ref={nameRef} type="text" className="form-control" placeholder="Full Name"/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input type="email" className="form-control" placeholder="Email"/>
+                        <input  ref={emailRef} type="email" className="form-control" placeholder="Email"/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input type="text" className="form-control" placeholder="Brand/Supplier"/>
+                        <input  ref={brandRef} type="text" className="form-control" placeholder="Brand/Supplier"/>
                         </div>
                     </div>
                                 
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input type="number" className="form-control" placeholder="Old Price"/>
+                        <input  ref={priceRef} type="number" className="form-control" placeholder="Price"/>
                         </div>
                         <div className="col">
-                        <input type="number" className="form-control" placeholder="New Price"/>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mt-4">
-                        <div className="col">
-                        <input type="number" className="form-control" placeholder="Rating"/>
-                        </div>
-                        <div className="col">
-                        <input type="number" className="form-control" placeholder="Quantity"/>
+                        <input  ref={ratingsRef} type="number" className="form-control" placeholder="Ratings"/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input type="text" className="form-control" placeholder="photo url"/>
+                        <input  ref={quantityRef} type="number" className="form-control" placeholder="Quantity"/>
+                        </div>
+                        <div className="col">
+                        <input  ref={soldRef} type="number" className="form-control" placeholder="Sold"/>
+                        </div>
+                    </div>
+                    <div className="row align-items-center mt-4">
+                        <div className="col">
+                        <input  ref={urlRef} type="text" className="form-control" placeholder="photo url"/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
                         
-                        <textarea name="" id="" cols="32" rows="5" className="form-control" placeholder='Enter full product description here'></textarea>
+                        <textarea ref={descriptionRef} name="" id="" cols="32" rows="5" className="form-control" placeholder='Enter full product description here'></textarea>
                         </div>
                     </div>
                     <div className="row justify-content-start mt-4">
@@ -66,6 +114,7 @@ const AddNewItem = () => {
                     </div>
                 </div>
                 </div>
+                </form>
             </section>
         </div>
     );
