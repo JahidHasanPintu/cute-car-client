@@ -1,6 +1,16 @@
 .car-icon {
   width: 100px;
 }
-.delete-icon {
-  background-color: gray;
+.delet-icon img {
+  width: 30px;
+  cursor: pointer;
+}
+.delet-icon {
+  padding: 2px;
+}
+
+@media screen and (max-width: 480px) {
+  .mob-dev {
+    display: none;
+  }
 }

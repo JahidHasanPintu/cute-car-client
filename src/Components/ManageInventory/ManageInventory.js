@@ -2,6 +2,7 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import useCars from '../../hooks/useCars';
 import SingleItems from './SingleItems/SingleItems';
+import './ManageInventory.css'
 
 
 
@@ -13,13 +14,14 @@ const ManageInventory = () => {
              <Table responsive>
                 <thead>
                     <tr>
-                    <th>Image</th>
+                    <th className='mob-dev'>Image</th>
                     <th>Name</th>
-                    <th>Brand</th>
+                    <th className='mob-dev'>Brand</th>
                     <th>price</th>
                     <th>Quantity</th>
-                    <th>Sold</th>
-                    <th>Edit/Delete </th>
+                    <th className='mob-dev'>Sold</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                     
                     </tr>
                 </thead>
