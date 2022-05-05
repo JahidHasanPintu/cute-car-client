@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Service.css'
+import './Car.css'
 
-const Service = (props) => {
-    const {id,name,img,description,price}=props.service;
+const Car = (props) => {
+    const {id,name,img,description,price}=props.car;
     const navigate = useNavigate();
     const navigateToUpdate = id =>{
         navigate(`/inventory/${id}`);
@@ -11,7 +11,7 @@ const Service = (props) => {
     
     return (
 
-        <div className='service col-sm-12 col-md-4'>
+        <div className='car col-sm-12 col-md-4'>
            
             
             <img src={img} alt="" />
@@ -27,4 +27,4 @@ const Service = (props) => {
     );
 };
 
-export default Service;
+export default Car;

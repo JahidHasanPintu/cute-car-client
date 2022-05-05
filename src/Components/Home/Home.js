@@ -2,10 +2,10 @@ import React from 'react';
 
 import Banner from '../Banner/Banner';
 import Brands from '../Brands/Brands';
+import Cars from '../Cars/Cars';
 import Contact from '../Contact/Contact';
 import Counter from '../Counter/Counter';
 import Feature from '../Feature/Feature';
-import Services from '../Services/Services';
 
 
 
@@ -14,7 +14,8 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Services></Services>
+            <Cars></Cars>
+            
             <Brands></Brands>
             <Counter></Counter>
             <Feature></Feature>
