@@ -7,7 +7,7 @@ import './Cars.css'
 const Cars = () => {
     const [cars,setCars] = useState([]);
     useEffect(()=>{
-        fetch('fakedb.json')
+        fetch('http://localhost:5000/cars')
         .then(res=>res.json())
         .then(data => setCars(data));
     },[])
@@ -18,7 +18,7 @@ const Cars = () => {
             {
                 cars?.map(car => <Car
                 
-                    key= {car.id}
+                    key= {car._id}
                     car={car}
                 >
 

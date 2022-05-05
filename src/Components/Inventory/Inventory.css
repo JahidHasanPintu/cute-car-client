@@ -27,7 +27,7 @@ img {
   padding: 2rem 1rem;
 }
 .product-title {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: capitalize;
   font-weight: 700;
   position: relative;
@@ -73,12 +73,14 @@ img {
 .product-price span {
   font-weight: 400;
 }
-.last-price span {
+.quantity span {
   color: #f64749;
-  text-decoration: line-through;
+  font-weight: bold;
+  margin-right: 30px;
 }
 .new-price span {
   color: #256eff;
+  font-weight: bold;
 }
 .product-detail h2 {
   text-transform: capitalize;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import img1 from '../../images/shoe_1.jpg';
 
@@ -7,6 +7,16 @@ import './Inventory.css';
 
 const Inventory = () => {
     const {inventoryID}=useParams();
+    // Loadinf single car by id 
+    const [cars,setCars] = useState([]);
+    useEffect(()=>{
+        fetch(`http://localhost:5000/cars/${inventoryID}`)
+        .then(res=>res.json())
+        .then(data => setCars(data));
+    },[])
+
+    const {_id,name,img,description,price,supplier,ratings,quantity,sold}=cars;
+
     return (
         <div>
             
@@ -17,7 +27,7 @@ const Inventory = () => {
                 <div className= "img-display">
                     <div className= "img-showcase">
                     
-                    <img src = {img1} alt = "shoe 1"/>
+                    <img src = {img} alt = "car img"/>
                     
                     </div>
                 </div>
@@ -25,26 +35,26 @@ const Inventory = () => {
                 </div>
                 {/* Card Right Side  */}
                 <div className= "product-content">
-                    <h2 className= "product-title">nike shoes Id: {inventoryID}</h2>
-                    <a href = "#" className= "product-link">visit nike store</a>
+                    <h2 className= "product-title">{name}</h2>
+                    <a href = "#" className= "product-link">{supplier}</a>
                     <div className= "product-rating">
                         <i className= "fas fa-star"></i>
                         <i className= "fas fa-star"></i>
                         <i className= "fas fa-star"></i>
                         <i className= "fas fa-star"></i>
                         <i className= "fas fa-star-half-alt"></i>
-                        <span>4.7(21)</span>
+                        <span>{ratings}(21)</span>
                     </div>
 
                     <div className= "product-price">
-                        <p className= "last-price">Old Price: <span>$257.00</span></p>
-                        <p className= "new-price">New Price: <span>$249.00 (5%)</span></p>
+                        <p className= "quantity">Quantity: <span>{quantity}</span>  Sold: <span>{sold}</span></p>
+                        <p className= "new-price"> Price: <span> ${price}</span></p>
                     </div>
 
                     <div className= "product-detail">
-                        <h3>about this item: </h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+                        <h2>About {name} </h2>
+                        <p>{description}</p>
+                        
                         
                     </div>
 
