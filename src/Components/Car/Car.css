@@ -27,6 +27,13 @@ h3 {
   margin-top: 5px;
 }
 
-.car h6 {
+.car h5 {
+  font-weight: bold;
   color: red;
+}
+.price-quan {
+  color: #282f3d;
+}
+.price-quan span {
+  margin-left: 160px;
 }

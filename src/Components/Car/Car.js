@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Car.css'
 
 const Car = (props) => {
-    const {_id,name,img,description,price}=props.car;
+    const {_id,name,quantity,img,description,price,supplier}=props.car;
     const navigate = useNavigate();
     const navigateToUpdate = id =>{
         navigate(`/inventory/${id}`);
@@ -16,8 +16,9 @@ const Car = (props) => {
             
             <img src={img} alt="" />
             <h3>{name}</h3>
-            <h6>price: ${price} /month</h6>
-            <p>{description}</p>
+            <h5>Brand: {supplier}</h5>
+            <h6 className='price-quan'>Price: ${price} <span>Quantity: {quantity}</span></h6>
+            <p>{description.substr(0,250)}....</p>
             <div onClick={()=> navigateToUpdate(_id)} className="bg-buy-plan">
                 <span  className="title4">Update</span>
             </div>

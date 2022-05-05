@@ -1,19 +1,16 @@
 
-import React, { useEffect, useState } from 'react';
+
+import useCars from '../../hooks/useCars';
 import Car from '../Car/Car';
 import './Cars.css'
 
     
 const Cars = () => {
-    const [cars,setCars] = useState([]);
-    useEffect(()=>{
-        fetch('http://localhost:5000/cars')
-        .then(res=>res.json())
-        .then(data => setCars(data));
-    },[])
+    
+    const [cars] =useCars();
     return (
         <div className='cars'>
-             <h1 className='title-text'>My Cars</h1>
+             <h4 className='text-center brand'>Cars</h4>
             <div className="car-container row">
             {
                 cars?.map(car => <Car
@@ -23,7 +20,7 @@ const Cars = () => {
                 >
 
                 </Car>                                      
-                )
+                ).slice(0,6)
             }
             </div>
            

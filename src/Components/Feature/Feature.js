@@ -9,18 +9,18 @@ const Feature = () => {
       <div className="row">
         <div className="section-head col-sm-12">
           <h4><span>Why Choose</span> Us?</h4>
-          <p>When you choose us, you'll feel the benefit of 10 years' experience of Web Development. Because we know the digital world and we know that how to handle it. With working knowledge of online, SEO and social media.</p>
+          <p>When you choose us, you are selecting the ocean of cars. Because we have the huge amount of brand new and expensive cars for our visitors. Here you can explore many cars and also you can be benifited by gathering car knowledge.</p>
         </div>
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_one"><i className="fa fa-globe"></i></span>
-            <h6>Modern Design</h6>
-            <p>We use latest technology for the latest world because we know the demand of peoples.</p>
+            <h6>Explore Unlimited</h6>
+            <p>We use latest technology for the latest world because we know the demand of peoples for cars.</p>
           </div>
         </div>
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_two"><i className="fa fa-anchor"></i></span>
-            <h6>Creative Design</h6>
-            <p>We are always creative and and always lisen our costomers and we mix these two things and make beast design.</p>
+            <h6>Creative Collection</h6>
+            <p>We are always creative and and always lisen our costomers and we mix these two things and make uniqe cars.</p>
           </div>
         </div>
         <div className="col-lg-4 col-sm-6">
@@ -31,20 +31,20 @@ const Feature = () => {
         </div>
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_four"><i className="fa fa-database"></i></span>
-            <h6>Business Growth</h6>
-            <p>Everyone wants to live on top of the mountain, but all the happiness and growth occurs while you're climbing it</p>
+            <h6>Huge Collection</h6>
+            <p>Everyone wants to live on huge amount of car collection, but all the happiness  occurs while you're getting it</p>
           </div>
         </div>
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_five"><i className="fa fa-upload"></i></span>
-            <h6>Market Strategy</h6>
-            <p>Holding back technology to preserve broken business models is like allowing blacksmiths to veto </p>
+            <h6>All Features</h6>
+            <p>Holding back technology to preserve every single feature of a car is like a real feeling for you </p>
           </div>
         </div>
         <div className="col-lg-4 col-sm-6">
           <div className="item"> <span className="icon feature_box_col_six"><i className="fa fa-camera"></i></span>
-            <h6>Affordable cost</h6>
-            <p>Love is a special word, and I use it only when I mean it. You say the word too much and it becomes cheap.</p>
+            <h6>Awsome Images</h6>
+            <p>Car is a special asset, and it needs to be crystal clear in look. Thats why we have the hd looking images.</p>
           </div>
         </div>
       </div>

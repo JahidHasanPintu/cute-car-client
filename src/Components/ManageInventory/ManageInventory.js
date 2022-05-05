@@ -8,7 +8,12 @@ import './ManageInventory.css'
 
 
 const ManageInventory = () => {
-    const [cars] =useCars();
+    const [cars,setCars] =useCars();
+    const handleUpdate = id =>{
+        console.log('Getting id from single item :',id);
+        const remaining = cars.filter(car=>car._id !== id);
+            setCars(remaining);
+    }
     return (
         <div>
              <Table responsive>
@@ -31,6 +36,7 @@ const ManageInventory = () => {
                         cars?.map(car => <SingleItems
                             key= {car._id}
                             car={car}
+                            // update = {()=>handleUpdate()}
                         >
                         
 
