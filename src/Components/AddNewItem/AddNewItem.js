@@ -43,10 +43,11 @@ const AddNewItem = () => {
         .then(res=>res.json())
         .then(result =>{
             console.log(result);
+            alert("Successfully added");
         })
         
         
-        console.log(JSON.stringify(carData));
+        // console.log(JSON.stringify(carData));
     };
 
     return (

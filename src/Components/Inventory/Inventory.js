@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import img1 from '../../images/shoe_1.jpg';
+
 
 
 import './Inventory.css';
@@ -16,6 +16,36 @@ const Inventory = () => {
     },[])
 
     const {_id,name,img,description,price,supplier,ratings,quantity,sold}=cars;
+
+
+    // Updating quantity
+    const quantityRef = useRef('');
+    const handleUpdateCars = event =>{
+        event.preventDefault();
+        const quantity = quantityRef.current.value;
+        console.log('getting quantity: ',quantity);
+        const updatedCars = {quantity};
+
+        // send data to the server
+        const url = `htttp://localhost:5000/cars/${inventoryID}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedCars)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data);
+            alert('users added successfully!!!');
+            // event.target.reset();
+        })
+    }
+
+
+
+
 
     return (
         <div>
@@ -59,8 +89,8 @@ const Inventory = () => {
                     </div>
 
                     <div className= "purchase-info">
-                        <input type = "number" placeholder='0'/>
-                        <button type = "button" className= "product-button">Restock </button>
+                        <input type = "number" ref={quantityRef} placeholder='0'/>
+                        <button type = "button" onClick={handleUpdateCars} className= "product-button">Restock </button>
                         <button type = "button" className= "product-button">Delivered</button>
                     </div>
 
