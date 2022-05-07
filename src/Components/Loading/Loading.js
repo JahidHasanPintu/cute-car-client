@@ -5,7 +5,8 @@ import Loader from '../../images/loader.gif';
 const Loading = () => {
     return (
         <div className='d-flex mt-5 justify-content-center align-items-center'>
-            <img src={Loader} alt="" />
+            <img className='loaderimg' src={Loader} alt="" />
+            <h2>Loading ....</h2>
         </div>
     );
 };
