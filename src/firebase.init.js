@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 
 //  Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDcmv5lMDuREo1T3gJWGJNhxSFoWPUTuz8",
-  authDomain: "cute-car-inventory.firebaseapp.com",
-  projectId: "cute-car-inventory",
-  storageBucket: "cute-car-inventory.appspot.com",
-  messagingSenderId: "665632287878",
-  appId: "1:665632287878:web:1ce481f5095a50e8caf507"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId
 };
 
 
