@@ -29,13 +29,14 @@ function App() {
         }></Route>
         <Route path="/manage-inventory" element={<ManageInventory></ManageInventory> }></Route>
         <Route path="/inventory" element={<Inventory></Inventory> }></Route>
-        {/* <Route path="/checkout" element={
-          <RequireAuth> <Checkout></Checkout> </RequireAuth>
-        }></Route> */}
         <Route path="/login" element={<Login></Login> }></Route>
         <Route path="/register" element={<Register></Register> }></Route>
-        <Route path="/add-new" element={<AddNewItem></AddNewItem> }></Route>
-        <Route path="/my-item" element={<MyItem></MyItem>}></Route>
+        <Route path="/add-new" element={<RequireAuth>
+          <AddNewItem></AddNewItem>
+        </RequireAuth> }></Route>
+        <Route path="/my-item" element={<RequireAuth>
+          <MyItem></MyItem>
+        </RequireAuth>}></Route>
         <Route path="*" element={ <NotFound></NotFound>}></Route>
         
       </Routes>

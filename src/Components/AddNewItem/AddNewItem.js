@@ -38,7 +38,7 @@ const AddNewItem = () => {
         description : descriptionRef.current.value
         }
         
-        const url= `http://localhost:5000/cars`;
+        const url= `https://secure-cliffs-70594.herokuapp.com/cars`;
         fetch(url,{
             method: 'POST',
             headers: {

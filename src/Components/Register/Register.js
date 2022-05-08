@@ -6,6 +6,7 @@ import './Register.css';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import { toast } from 'react-toastify';
 
 const Register = () => {
 
@@ -35,17 +36,7 @@ const Register = () => {
         navigate(from, { replace: true });
     }
 
-
-
-
-    
-    
-
-    
-    
- 
-
-     
+  
      // event handler 
     //  const handleRegister = event =>{
     //      event.preventDefault();
@@ -62,6 +53,7 @@ const Register = () => {
         const email = emailRef.current.value;
         const password= passwordRef.current.value;      
         createUserWithEmailAndPassword(email, password);
+        toast('verification email sent');
     }
    
      const navigateLogin =event =>{
@@ -104,11 +96,7 @@ const Register = () => {
                         <label className="form-check-label" > Agree with our Term's and condition. </label>
                     </div>
                     </div>
-
-                    {/* <div className="col">
-                    
-                    <a href="#!">Forgot password?</a>
-                    </div> */}
+                   
                 </div>
 
                 

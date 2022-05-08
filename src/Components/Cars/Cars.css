@@ -7,3 +7,12 @@
 .car-container {
   margin: 2%;
 }
+
+.manage-button {
+  background-color: #282f3d;
+  color: aliceblue;
+  margin-bottom: 50px;
+}
+.manage-button button :hover {
+  color: aqua;
+}

@@ -17,7 +17,7 @@ const Inventory = () => {
     const [quantity1,setQuantity]=useState(1);
     
     // useEffect(()=>{
-    //     fetch(`http://localhost:5000/cars/${inventoryID}`)
+    //     fetch(`https://secure-cliffs-70594.herokuapp.com/cars/${inventoryID}`)
     //     .then(res=>res.json())
     //     .then(data => setCars(data));
     // },[])
@@ -39,7 +39,7 @@ const Inventory = () => {
 
         // send data to the server
         setLoading(true);
-        const url = `http://localhost:5000/cars/${inventoryID}`;
+        const url = `https://secure-cliffs-70594.herokuapp.com/cars/${inventoryID}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -77,7 +77,7 @@ const Inventory = () => {
 
         // send data to the server
         setLoading(true);
-        const url = `http://localhost:5000/cars/${inventoryID}`;
+        const url = `https://secure-cliffs-70594.herokuapp.com/cars/${inventoryID}`;
         fetch(url, {
             method: 'PUT',
             headers: {

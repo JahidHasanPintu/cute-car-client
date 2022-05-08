@@ -19,12 +19,16 @@ const ManageInventory = () => {
           navigate(`/inventory/${id}`);
       }
 
+      const navigateToAddNew = () =>{
+        navigate(`/add-new`);
+    }
+
      // delete icon 
     //  const [cars,setCars]=useCars();
      const handleDelete = id =>{
          const proceed = window.confirm( `Are you sure want to delete`);
          if(proceed){
-             const url= `http://localhost:5000/cars/${id}`;
+             const url= `https://secure-cliffs-70594.herokuapp.com/cars/${id}`;
          fetch(url,{
              method: 'DELETE'
              
@@ -40,7 +44,12 @@ const ManageInventory = () => {
      }
     return (
         <div>
-             <Table responsive>
+            <div className="text-center buttons">
+                <button className='btn add-button'>Total Cars : {cars.length}</button>
+                <button className='btn add-button' onClick={navigateToAddNew}>Add New</button>
+             
+            </div>
+            <Table responsive>
                 <thead>
                     <tr>
                     <th className='mob-dev'>Image</th>

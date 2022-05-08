@@ -17,7 +17,7 @@ const MyItem = () => {
         
         const getMycar = async() =>{
             const email = user.email;
-            const url = `http://localhost:5000/mycar?email=${email}`;
+            const url = `https://secure-cliffs-70594.herokuapp.com/mycar?email=${email}`;
             try{
                 const {data} = await axiosPrivate.get(url);
                 setCars(data);
@@ -45,7 +45,7 @@ const MyItem = () => {
      const handleDelete = id =>{
         const proceed = window.confirm( `Are you sure want to delete`);
         if(proceed){
-            const url= `http://localhost:5000/cars/${id}`;
+            const url= `https://secure-cliffs-70594.herokuapp.com/cars/${id}`;
         fetch(url,{
             method: 'DELETE'
             
