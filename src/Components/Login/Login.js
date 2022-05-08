@@ -63,7 +63,7 @@ const Login = () => {
         const email =emailRef.current.value;
         if(email){
             await sendPasswordResetEmail(email);
-        toast('Email sent to',email);
+        toast('Email sent');
         }else{
             toast('Please enter email address.');
         }
@@ -115,7 +115,7 @@ const Login = () => {
                     <button onClick={() => signInWithGoogle()} type="button" className="btn btn-primary btn-block mb-4">
                     <i className="fab fa-google"></i>    sign in with google  
                     </button>
-                    <ToastContainer />
+                    
 
                 </div>
                 </form>

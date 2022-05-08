@@ -1,8 +1,14 @@
 
 import React, { useRef, useState } from 'react';
 import './AddNewItem.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddNewItem = () => {
+
+    const [user] = useAuthState(auth);
+    console.log(user);
 
     // using use ref hook to take input data
     const nameRef = useRef('');
@@ -43,7 +49,8 @@ const AddNewItem = () => {
         .then(res=>res.json())
         .then(result =>{
             console.log(result);
-            alert("Successfully added");
+            
+            toast('Car added successfully');
         })
         
         
@@ -64,45 +71,45 @@ const AddNewItem = () => {
                     </div>
                     <div className="row align-items-center">
                         <div className="col mt-4">
-                        <input  ref={nameRef} type="text" className="form-control" placeholder="Full Name"/>
+                        <input  ref={nameRef} type="text" className="form-control" placeholder="Car Name" required/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input  ref={emailRef} type="email" className="form-control" placeholder="Email"/>
+                        <input  ref={emailRef} type="email" value={user?.email} className="form-control" placeholder="Email" required readOnly disabled />
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input  ref={brandRef} type="text" className="form-control" placeholder="Brand/Supplier"/>
+                        <input  ref={brandRef} type="text" className="form-control" placeholder="Brand/Supplier" required/>
                         </div>
                     </div>
                                 
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input  ref={priceRef} type="number" className="form-control" placeholder="Price"/>
+                        <input  ref={priceRef} type="number" className="form-control" placeholder="Price" required/>
                         </div>
                         <div className="col">
-                        <input  ref={ratingsRef} type="number" className="form-control" placeholder="Ratings"/>
-                        </div>
-                    </div>
-                    <div className="row align-items-center mt-4">
-                        <div className="col">
-                        <input  ref={quantityRef} type="number" className="form-control" placeholder="Quantity"/>
-                        </div>
-                        <div className="col">
-                        <input  ref={soldRef} type="number" className="form-control" placeholder="Sold"/>
+                        <input  ref={ratingsRef} type="number" className="form-control" placeholder="Ratings" required/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
-                        <input  ref={urlRef} type="text" className="form-control" placeholder="photo url"/>
+                        <input  ref={quantityRef} type="number" className="form-control" placeholder="Quantity" required/>
+                        </div>
+                        <div className="col">
+                        <input  ref={soldRef} type="number" className="form-control" placeholder="Sold" required/>
+                        </div>
+                    </div>
+                    <div className="row align-items-center mt-4">
+                        <div className="col">
+                        <input  ref={urlRef} type="text" className="form-control" placeholder="photo url" required/>
                         </div>
                     </div>
                     <div className="row align-items-center mt-4">
                         <div className="col">
                         
-                        <textarea ref={descriptionRef} name="" id="" cols="32" rows="5" className="form-control" placeholder='Enter full product description here'></textarea>
+                        <textarea ref={descriptionRef} name="" id="" cols="32" rows="5" className="form-control" placeholder='Enter full product description here' required></textarea>
                         </div>
                     </div>
                     <div className="row justify-content-start mt-4">

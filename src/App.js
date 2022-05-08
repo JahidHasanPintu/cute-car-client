@@ -13,6 +13,7 @@ import MyItem from './Components/MyItem/MyItem';
 import Blog from './Components/Blog/Blog';
 import Register from './Components/Register/Register';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
